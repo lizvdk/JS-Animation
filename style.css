@@ -1,0 +1,99 @@
+#blue-square {
+  background-color: blue;
+  height: 100;
+  width: 100;
+}
+
+#red-square {
+  background-color: red;
+  height: 100;
+  width: 100;
+}
+
+#green-square {
+  background-color: green;
+  height: 100;
+  width: 100;
+}
+
+#purple-square {
+  background-color: purple;
+  height: 100;
+  width: 100;
+}
+
+#orange-square {
+  background-color: orange;
+  height: 100;
+  width: 100;
+  margin-left: 100px;
+}
+
+#brown-square {
+  background-color: brown;
+  height: 100;
+  width: 100;
+}
+
+#red-circle {
+  background-color: red;
+  border-radius: 50%;
+  height: 50;
+  margin: 10px;
+  width: 50;
+  padding: 10px;
+}
+
+#yellow-circle {
+  background-color: yellow;
+  border-radius: 50%;
+  height: 50;
+  margin: 10px;
+  width: 50;
+  padding: 10px;
+}
+
+#green-circle {
+  background-color: green;
+  border-radius: 50%;
+  height: 50;
+  margin: 10px;
+  width: 50;
+  padding: 10px;
+}
+
+#purple-oval {
+  background-color: purple;
+  border-radius: 50%;
+  height: 50;
+  margin: 10px;
+  width: 100px;
+  padding: 10px;
+}
+
+#blue-oval {
+  background-color: blue;
+  border-radius: 50%;
+  height: 50;
+  margin: 10px;
+  width: 100px;
+  padding: 10px;
+}
+
+#orange-oval {
+  background-color: orange;
+  border-radius: 50%;
+  height: 50;
+  margin: 10px;
+  width: 100px;
+  padding: 10px;
+}
+
+#pink-oval {
+  background-color: pink;
+  border-radius: 50%;
+  height: 50;
+  margin: 10px;
+  width: 100px;
+  padding: 10px;
+}

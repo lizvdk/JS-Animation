@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <title>Ch 2</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+  </head>
+  <body>
+    <h1>Basics</h1>
+    <p>
+      First argument is an object that maps CSS properties to their desired
+      final values.
+    </p>
+    <div id='blue-square'></div>
+
+    <p>Second argument is an object that specifys animation options.</p>
+    <div id='red-square'></div>
+
+    <p>Shorthand: comma-seperated argument syntax instead of passing in second object.</p>
+    <pre>
+      duration (integer), easing (string), complete (function value)
+      <div id='green-square'></div>
+    </pre>
+
+    <p>If you want any other animation options, you must use object syntax.</p>
+    <div id='purple-square'></div>
+
+    <p> There are 2 differences between velocity annimation and CSS annimation:</p>
+    <ol>
+      <li> Velocity only accepts a single numeric value per CSS property.</li>
+      <li> 'padding-left' becomes 'paddingLeft'...</li>
+    </ol>
+
+    <p>Using js value operators:</p>
+    <div id='orange-square'></div>
+
+    <p>Chaining</p>
+    <div id='brown-square'></div>
+
+    <p>Duration</p>
+    <div id='red-circle'>
+      slow
+      <br>
+      (600ms)
+    </div>
+    <div id='yellow-circle'>
+      normal
+      (400ms)
+    </div>
+    <div id='green-circle'>
+      fast
+      (200ms)
+    </div>
+
+    <p>Easing</p>
+    <div id='orange-oval'>
+      ease-in-out
+    </div>
+
+    <div id='purple-oval'>
+      ease-in
+    </div>
+
+    <div id='blue-oval'>
+      ease-out
+    </div>
+
+    <div id='pink-oval'>
+      spring
+    </div>
+
+
+    <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+    <script src='http://cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js'></script>
+    <script>
+
+      var $blueSquare = $('#blue-square');
+      $blueSquare.velocity({ width: '100%', opacity: '0.5' });
+
+      var $redSquare = $('#red-square');
+      $redSquare.velocity({ width: '75%', opacity: '0.5' }, { duration: 1000, easing: 'swing' });
+
+      var $greenSquare = $('#green-square');
+      $greenSquare.velocity({ width: '50%', opacity: '0.5' }, 900, 'ease-in-out', function() { console.log('Complete!') });
+
+      var $purpleSquare = $('#purple-square');
+      $purpleSquare.velocity({ width: '80%', opacity: '0.5' }, { duration: 1000, easing: 'ease-in-out', delay: 500 });
+
+      var $orangeSquare = $('#orange-square');
+      $orangeSquare.velocity({ marginLeft: '-=25' })
+
+      var $brownSquare = $('#brown-square');
+      $brownSquare
+        .velocity({ width: '190px', height: '110px' })
+        .velocity({ marginTop: '100px' })
+
+      var $redCircle = $('#red-circle');
+      $redCircle.velocity({ marginLeft: '+=30px', opacity: '0.5' }, { duration: 'slow' });
+
+      var $yellowCircle = $('#yellow-circle');
+      $yellowCircle.velocity({ marginLeft: '+=30px', opacity: '0.5' }, { duration: 'normal' });
+
+      var $greenCircle = $('#green-circle');
+      $greenCircle.velocity({ marginLeft: '+=30px', opacity: '0.5' }, { duration: 'fast' });
+
+      var $orangeOval = $('#orange-oval');
+      $orangeOval.velocity({ marginLeft: '+=90px', opacity: '0.5' }, 'ease-in-out');
+
+      var $purpleOval = $('#purple-oval');
+      $purpleOval.velocity({ marginLeft: '+=90px', opacity: '0.5' }, 'ease-in');
+
+      var $blueOval = $('#blue-oval');
+      $blueOval.velocity({ marginLeft: '+=90px', opacity: '0.5' }, 'ease-out');
+
+      var $pinkOval = $('#pink-oval');
+      $pinkOval.velocity({ marginLeft: '+=90px', opacity: '0.5' }, 'spring');
+    </script>
+  </body>
+</html>
